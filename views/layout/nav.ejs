@@ -1,0 +1,70 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/admin">小奇便签</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="nav-item active"><a href="/admin">首页 <span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle nav-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                便签管理
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="/admin/mark/list">便签列表</a></li>
+                <li><a href="/admin/mark/add">便签添加</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle nav-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                分类管理
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="/admin/type/list">分类列表</a></li>
+                <li><a href="/admin/type/add">分类添加</a></li>
+            </ul>
+        </li>
+        <li class="usermang nav-item"><a href="/user/list">用户管理</a></li>
+        <li class="apides nav-item"><a href="/api">接口文档</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+            
+            <form class="navbar-form navbar-left" action="/admin/search" id="search_form">
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-btn">
+                    <select class="form-control" name="origin" id="origin">
+                        <option selected value="mark">便签</option>
+                        <option value="author">作者</option>
+                    </select>
+                  </div>
+                  <input type="search" name="key" class="form-control" placeholder="搜索便签">
+                  <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default">搜索</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <b id="username">我的</b> <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="set"><a href="/admin/set">设置</a></li>
+            <li><a href="/admin/logout">退出</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
